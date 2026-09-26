@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ArCode Standard — منظمة المعايير والمصطلحات العربية التقنية</title>
 <meta name="description" content="ArCode Standard منظمة مفتوحة المصدر تبني منظومة معايير ومصطلحات علمية وتقنية عربية، ومشاريع برمجية مفتوحة، وأدوات للمطورين والباحثين.">
-<meta name="theme-color" content="#1d4ed8">
+<meta name="theme-color" content="#0f172a">
+<script>(function(){try{var t=localStorage.getItem("arcode-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();</script>
 <link rel="canonical" href="https://arcode-standard.github.io/">
 <link rel="icon" href="assets/img/arcode.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ArCode Standard — منظمة المعايير والمصطلحات العربية التقنية">
@@ -24,7 +28,7 @@
 <header class="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="./">
-      <img src="assets/img/arcode.svg" alt="شعار ArCode Standard" width="34" height="34">
+      <img src="assets/img/arcode.svg" alt="شعار ArCode Standard" width="30" height="30">
       <span>ArCode Standard<small>منظمة المعايير العربية</small></span>
     </a>
 
@@ -34,10 +38,10 @@
       <a href="#about">من نحن</a>
       <a href="#projects">مشاريعنا</a>
       <a href="#future">مشاريع مستقبلية</a>
-      <a href="#values">قيمنا</a>
       <a href="#contribute">ساهم معنا</a>
-      <a class="lang" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
-      <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard" rel="noopener">GitHub</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">قاموس المصطلحات</a>
+      <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+      <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">GitHub</a>
       <button class="theme-btn" type="button" aria-label="تبديل المظهر">◐</button>
     </nav>
   </div>
@@ -46,38 +50,40 @@
 <main id="main">
 
 <!-- ===================== البطل ===================== -->
-<section class="hero">
-  <div class="wrap hero__grid">
-    <div>
-      <span class="eyebrow">منظمة مفتوحة المصدر</span>
-      <h1>ArCode Standard</h1>
-      <p class="hero__lead">
-        منظمة تعمل على بناء <strong>منظومة معايير ومصطلحات علمية وتقنية عربية</strong>
-        متناسقة مع المراجع الدولية، ومتناحة للباحث والمطوّر والطالب على حدّ سواء.
-      </p>
-      <p class="muted">
-        نؤمن أن البرمجيات القوية لا تعتمد على الكود وحده، بل تحتاج إلى أسس معرفية واضحة.
-        لذلك نوفّر معطيات موثّقة، وأدوات عملية، ومشاريع برمجية مفتوحة يستفيد منها المجتمع التقني العربي.
-      </p>
+<section class="hero" id="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__brand">ArCode Standard</div>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">مشروع ArCode-Core</a>
-        <a class="btn btn--ghost" href="#projects">تصفّح المشاريع</a>
-        <a class="btn btn--ghost" href="#contribute">كيف أساهم؟</a>
-      </div>
+    <h1>منظمة <span class="gradient">المعايير والمصطلحات</span> العربية</h1>
+
+    <p class="hero__sub">
+      نبني منظومة معايير ومصطلحات علمية وتقنية عربية متناسقة مع المراجع الدولية،
+      إلى جانب مشاريع برمجية مفتوحة وأدوات يبن عليها المطوّر والباحث والطالب.
+    </p>
+
+    <div class="hero__cta">
+      <a class="btn btn--blue" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">تصفّح قاموس المصطلحات</a>
+      <a class="btn btn--ghost" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">مشاريعنا على GitHub</a>
     </div>
 
-    <aside class="hero__card">
+    <div class="hero__panel">
       <h2>ما نعمل على بنائه</h2>
       <ul class="pill-list">
-        <li><span class="dot"></span> معطيات مصطلحات علمية موثّقة المصدر</li>
-        <li><span class="dot"></span> أدوات ومكتبات مساعدة للمطورين</li>
-        <li><span class="dot"></span> مواصفات وأدلة إرشاد قابلة للتطبيق</li>
+        <li><span class="dot"></span> معطيات مصطلحات موثّقة المصدر</li>
+        <li><span class="dot"></span> أدوات ومكتبات للمطوّرين</li>
+        <li><span class="dot"></span> مواصفات وأدلة إرشاد</li>
         <li><span class="dot"></span> نماذج لغوية عربية متخصصة</li>
-        <li><span class="dot dot--soon"></span> منصات وأطر عمل تقنية</li>
-        <li><span class="dot dot--plan"></span> واجهات برمجية مفتوحة موثّقة</li>
+        <li><span class="dot dot--orange"></span> منصات وأطر عمل تقنية</li>
+        <li><span class="dot dot--gray"></span> واجهات برمجية مفتوحة</li>
       </ul>
-    </aside>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-block-start:22px">
+    <span class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>منظمة مفتوحة المصدر</span>
+    </span>
   </div>
 </section>
 
@@ -116,7 +122,8 @@
         نعمل على معالجة ذلك ببناء <strong>مرجعية مصطلحات مركزية</strong> موثّقة المصدر، ومرتبطة بمعرّفات ثابتة، وقابلة للتوسّع والتحديث المستمر.
       </p>
       <p>
-        كل تعريف في ArCode-Core يُنقل من مصدره الأصلي، ويُوثَّق بمرجعه، ويرتبط بمصطلحات ذات صلة عبر معرّفات ثابتة
+        كل تعريف في <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">قاموس ArCode-Core</a>
+        يُنقل من مصدره الأصلي، ويُوثَّق بمرجعه، ويرتبط بمصطلحات ذات صلة عبر معرّفات ثابتة
         على نمط <span class="mono">ACS-CS-0001</span>، فيصبح النص التقني قابلًا للتحقق آليًا وقابلًا للترجمة الآمنة.
       </p>
     </div>
@@ -163,8 +170,9 @@
           وعلاقات مترابطة بين المصطلحات.
         </p>
         <div class="card__foot">
-          <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">عرض المستودع</a>
-          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" rel="noopener">دليل المساهمة</a>
+          <a class="btn btn--blue btn--sm" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">فتح القاموس</a>
+          <a class="btn btn--ghost btn--sm" href="https://arcode-standard.github.io/ArCode-Core/wiki.html" target="_blank" rel="noopener">الدليل</a>
+          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core" target="_blank" rel="noopener">المستودع</a>
         </div>
       </article>
 
@@ -181,7 +189,7 @@
           ليكون جسرًا بين مرجعية ArCode-Core والمعالجة الآلية للغة العربية.
         </p>
         <div class="card__foot">
-          <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard/ArCode-BERT" rel="noopener">عرض المستودع</a>
+          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-BERT" target="_blank" rel="noopener">المستودع</a>
         </div>
       </article>
 
@@ -267,8 +275,8 @@
     </div>
 
     <ol class="steps reveal">
-      <li>تابع مشاريع <a href="https://github.com/ArCode-Standard" rel="noopener">ArCode Standard</a> على GitHub</li>
-      <li>شارك في النقاشات واطرح اقتراحاتك عبر Discussions</li>
+      <li>تابع مشاريع <a href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">ArCode Standard</a> على GitHub</li>
+      <li>تصفّح <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">قاموس المصطلحات</a> وأبلغ عن أي خلل</li>
       <li>اطلع على المعايير وأدلة المساهمة في المستودعات</li>
       <li>ساهم بالكود أو بالتوثيق أو بالمصطلحات</li>
     </ol>
@@ -282,11 +290,12 @@
       <h2>لنبنِ مرجعية تقنية عربية معًا</h2>
       <p>
         سواء كنت مطوّرًا، أو باحثًا، أو طالبًا، أو مترجمًا — مساهمتك تضيف قيمة.
-        ابدأ من مستودع مفتوح، أو اقترح مجالًا جديدًا، أو تعرّف على مجتمع ArCode.
+        ابدأ من قاموس المصطلحات، أو من مستودع مفتوح، أو اقترح مجالًا جديدًا.
       </p>
       <div class="cta__btns">
-        <a class="btn btn--primary" href="https://github.com/ArCode-Standard" rel="noopener">ابدأ من GitHub</a>
-        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" rel="noopener">دليل المساهمة</a>
+        <a class="btn btn--blue" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">تصفّح القاموس</a>
+        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">ابدأ من GitHub</a>
+        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">دليل المساهمة</a>
       </div>
     </div>
   </div>
@@ -303,10 +312,11 @@
       <div class="faint">© <span data-year>2026</span> ArCode Standard — مرخّص مفتوح المصدر</div>
     </div>
     <nav class="ftr__links" aria-label="روابط التذييل">
-      <a href="https://github.com/ArCode-Standard" rel="noopener">المؤسسة</a>
-      <a href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">ArCode-Core</a>
-      <a href="https://github.com/ArCode-Standard/ArCode-BERT" rel="noopener">ArCode-BERT</a>
-      <a href="../" lang="en" hreflang="en">English</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">قاموس المصطلحات</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/wiki.html" target="_blank" rel="noopener">الدليل</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/api.html" target="_blank" rel="noopener">واجهة API</a>
+      <a href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">المؤسسة</a>
+      <a href="en/" lang="en" hreflang="en">English</a>
     </nav>
   </div>
 </footer>

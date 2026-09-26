@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ArCode Standard — Open Standards &amp; Arabic Technical Terminology</title>
 <meta name="description" content="ArCode Standard is an open-source organisation building Arabic scientific and technical terminology standards, open-source projects, and developer tooling.">
-<meta name="theme-color" content="#1d4ed8">
+<meta name="theme-color" content="#0f172a">
+<script>(function(){try{var t=localStorage.getItem("arcode-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();</script>
 <link rel="canonical" href="https://arcode-standard.github.io/en/">
 <link rel="icon" href="../assets/img/arcode.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ArCode Standard — Open Standards &amp; Arabic Technical Terminology">
@@ -24,7 +28,7 @@
 <header class="hdr">
   <div class="wrap hdr__in">
     <a class="brand" href="../">
-      <img src="../assets/img/arcode.svg" alt="ArCode Standard logo" width="34" height="34">
+      <img src="../assets/img/arcode.svg" alt="ArCode Standard logo" width="30" height="30">
       <span>ArCode Standard<small>Open Standards Organisation</small></span>
     </a>
 
@@ -34,10 +38,10 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#future">Roadmap</a>
-      <a href="#values">Values</a>
       <a href="#contribute">Contribute</a>
-      <a class="lang" href="../" hreflang="ar" lang="ar" aria-label="Arabic version">ع</a>
-      <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard" rel="noopener">GitHub</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">Terminology Dictionary</a>
+      <a class="lang" href="../" hreflang="ar" lang="ar">ع</a>
+      <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">GitHub</a>
       <button class="theme-btn" type="button" aria-label="Toggle theme">◐</button>
     </nav>
   </div>
@@ -46,39 +50,40 @@
 <main id="main">
 
 <!-- ===================== Hero ===================== -->
-<section class="hero">
-  <div class="wrap hero__grid">
-    <div>
-      <span class="eyebrow">Open-source organisation</span>
-      <h1>ArCode Standard</h1>
-      <p class="hero__lead">
-        We build a <strong>standardised body of Arabic scientific and technical terminology</strong>
-        aligned with international references, and accessible to researchers, developers, and students alike.
-      </p>
-      <p class="muted">
-        Strong software does not rest on code alone — it needs a solid conceptual foundation.
-        So we provide documented datasets, practical tooling, and open-source projects the Arabic
-        technical community can actually build on.
-      </p>
+<section class="hero" id="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__brand">ArCode Standard</div>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">ArCode-Core</a>
-        <a class="btn btn--ghost" href="#projects">Browse projects</a>
-        <a class="btn btn--ghost" href="#contribute">How to contribute</a>
-      </div>
+    <h1>Open Standards for <span class="gradient">Arabic Technical Knowledge</span></h1>
+
+    <p class="hero__sub">
+      We build Arabic scientific and technical terminology aligned with international references,
+      alongside open-source projects and tooling that developers, researchers, and students build on.
+    </p>
+
+    <div class="hero__cta">
+      <a class="btn btn--blue" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">Browse the dictionary</a>
+      <a class="btn btn--ghost" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">Our projects on GitHub</a>
     </div>
 
-    <aside class="hero__card">
+    <div class="hero__panel">
       <h2>What we are building</h2>
       <ul class="pill-list">
-        <li><span class="dot"></span> Source-documented scientific terminology datasets</li>
-        <li><span class="dot"></span> Libraries and tooling for developers</li>
-        <li><span class="dot"></span> Applicable specifications and guides</li>
-        <li><span class="dot"></span> specialised Arabic language models</li>
-        <li><span class="dot dot--soon"></span> Applications and technical frameworks</li>
-        <li><span class="dot dot--plan"></span> Documented open APIs</li>
+        <li><span class="dot"></span> Source-documented terminology datasets</li>
+        <li><span class="dot"></span> Libraries and developer tooling</li>
+        <li><span class="dot"></span> Specifications and guides</li>
+        <li><span class="dot"></span> Specialised Arabic language models</li>
+        <li><span class="dot dot--orange"></span> Applications and frameworks</li>
+        <li><span class="dot dot--gray"></span> Documented open APIs</li>
       </ul>
-    </aside>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-block-start:22px">
+    <span class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>Open-source organisation</span>
+    </span>
   </div>
 </section>
 
@@ -118,9 +123,10 @@
         reference</strong> that is source-documented, tied to stable identifiers, and designed to grow and stay current.
       </p>
       <p>
-        Every definition in ArCode-Core is carried over from its original source, cited against that reference,
-        and linked to related terms through stable identifiers such as <span class="mono">ACS-CS-0001</span> —
-        making technical text machine-verifiable and safe to translate.
+        Every definition in <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">the ArCode-Core dictionary</a>
+        is carried over from its original source, cited against that reference, and linked to related terms
+        through stable identifiers such as <span class="mono">ACS-CS-0001</span> — making technical text
+        machine-verifiable and safe to translate.
       </p>
     </div>
 
@@ -166,8 +172,9 @@
           stable identifiers, source-documented definitions, and interlinked terms.
         </p>
         <div class="card__foot">
-          <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">View repository</a>
-          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" rel="noopener">Contributing guide</a>
+          <a class="btn btn--blue btn--sm" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">Open dictionary</a>
+          <a class="btn btn--ghost btn--sm" href="https://arcode-standard.github.io/ArCode-Core/wiki.html" target="_blank" rel="noopener">Wiki</a>
+          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-Core" target="_blank" rel="noopener">Repository</a>
         </div>
       </article>
 
@@ -185,7 +192,7 @@
           reference and Arabic natural-language processing.
         </p>
         <div class="card__foot">
-          <a class="btn btn--primary btn--sm" href="https://github.com/ArCode-Standard/ArCode-BERT" rel="noopener">View repository</a>
+          <a class="btn btn--ghost btn--sm" href="https://github.com/ArCode-Standard/ArCode-BERT" target="_blank" rel="noopener">Repository</a>
         </div>
       </article>
 
@@ -271,8 +278,8 @@
     </div>
 
     <ol class="steps reveal">
-      <li>Follow <a href="https://github.com/ArCode-Standard" rel="noopener">ArCode Standard</a> on GitHub</li>
-      <li>Join the discussions and share your ideas</li>
+      <li>Follow <a href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">ArCode Standard</a> on GitHub</li>
+      <li>Browse <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">the terminology dictionary</a> and report any issues</li>
       <li>Read the standards and contributing guides in the repositories</li>
       <li>Contribute code, documentation, or terminology</li>
     </ol>
@@ -286,11 +293,12 @@
       <h2>Let's build an Arabic technical reference together</h2>
       <p>
         Whether you are a developer, a researcher, a student, or a translator — your contribution adds value.
-        Start from an open repository, propose a new domain, or meet the ArCode community.
+        Start from the terminology dictionary, or from an open repository, or propose a new domain.
       </p>
       <div class="cta__btns">
-        <a class="btn btn--primary" href="https://github.com/ArCode-Standard" rel="noopener">Start on GitHub</a>
-        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" rel="noopener">Contributing guide</a>
+        <a class="btn btn--blue" href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">Browse the dictionary</a>
+        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">Start on GitHub</a>
+        <a class="btn btn--ghost" href="https://github.com/ArCode-Standard/ArCode-Core/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing guide</a>
       </div>
     </div>
   </div>
@@ -307,9 +315,10 @@
       <div class="faint">© <span data-year>2026</span> ArCode Standard — openly licensed</div>
     </div>
     <nav class="ftr__links" aria-label="Footer links">
-      <a href="https://github.com/ArCode-Standard" rel="noopener">Organisation</a>
-      <a href="https://github.com/ArCode-Standard/ArCode-Core" rel="noopener">ArCode-Core</a>
-      <a href="https://github.com/ArCode-Standard/ArCode-BERT" rel="noopener">ArCode-BERT</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/index.html" target="_blank" rel="noopener">Dictionary</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/wiki.html" target="_blank" rel="noopener">Wiki</a>
+      <a href="https://arcode-standard.github.io/ArCode-Core/api.html" target="_blank" rel="noopener">API</a>
+      <a href="https://github.com/ArCode-Standard" target="_blank" rel="noopener">Organisation</a>
       <a href="../" lang="ar" hreflang="ar">العربية</a>
     </nav>
   </div>

@@ -29,19 +29,22 @@
   /* ---------- 2. تبديل الوضع الداكن (مع الحفظ) ---------- */
   var THEME_KEY = "arcode-theme";
   var root = d.documentElement;
+  var isEN = root.getAttribute("data-lang") === "en";
+  var LABEL = isEN
+    ? { on: "Switch to dark mode", off: "Switch to light mode", auto: "Toggle theme" }
+    : { on: "التبديل إلى الوضع الداكن", off: "التبديل إلى الوضع الفاتح", auto: "تبديل المظهر" };
 
   function applyTheme(mode) {
     if (mode === "light" || mode === "dark") {
       root.setAttribute("data-theme", mode);
     } else {
+      // بلا سمة: يعود الموقع تلقائيًا إلى تفضيل النظام (via CSS)
       root.removeAttribute("data-theme");
     }
     $$(".theme-btn").forEach(function (b) {
       b.textContent = mode === "light" ? "☀" : mode === "dark" ? "☾" : "◐";
       b.setAttribute("aria-label",
-        mode === "light" ? "التبديل إلى الوضع الداكن"
-        : mode === "dark" ? "التبديل إلى الوضع الفاتح"
-        : "تبديل المظهر");
+        mode === "light" ? LABEL.on : mode === "dark" ? LABEL.off : LABEL.auto);
     });
   }
 
